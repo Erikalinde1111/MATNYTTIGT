@@ -38,6 +38,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3At-3i-rfQ">
                                 <rect key="frame" x="172" y="405" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.15533296290000001" green="0.65067791100000005" blue="0.79628190450000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="SÖK"/>
                             </button>
                         </subviews>
