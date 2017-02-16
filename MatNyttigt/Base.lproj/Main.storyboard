@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,31 +22,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ALLT OM INNEHÅLL I MATVAROR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xw-rI-gJk">
-                                <rect key="frame" x="59" y="71" width="258" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALLT OM INNEHÅLL I MATVAROR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xw-rI-gJk">
+                                <rect key="frame" x="16" y="72" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="ijy-ZW-p01"/>
+                                    <constraint firstAttribute="height" constant="21" id="yRU-Eh-0VV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3At-3i-rfQ">
-                                <rect key="frame" x="172" y="405" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3At-3i-rfQ">
+                                <rect key="frame" x="159" y="580" width="68" height="37"/>
                                 <color key="backgroundColor" red="0.15533296290000001" green="0.65067791100000005" blue="0.79628190450000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="Yff-qo-vmO"/>
+                                    <constraint firstAttribute="height" constant="37" id="dUU-Q6-KO8"/>
+                                </constraints>
                                 <state key="normal" title="SÖK"/>
                                 <connections>
-                                    <segue destination="rYO-dr-amu" kind="show" id="LFs-zK-cec"/>
+                                    <segue destination="rYO-dr-amu" kind="show" id="DsS-h7-Pit"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SÖK I LIVSMEDELSVERKETS DATABAS" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IDu-lo-tP8">
-                                <rect key="frame" x="52" y="161" width="272" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HÄR KAN DU SÖKA I LIVSMEDELSVERKETS DATABAS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NV8-lb-PVA">
+                                <rect key="frame" x="16" y="285" width="343" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3At-3i-rfQ" secondAttribute="bottom" constant="50" id="1Ph-DC-EH9"/>
+                            <constraint firstItem="9Xw-rI-gJk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4FU-rd-3pc"/>
+                            <constraint firstItem="3At-3i-rfQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="143" id="Rof-Kn-0Pz"/>
+                            <constraint firstItem="NV8-lb-PVA" firstAttribute="top" secondItem="9Xw-rI-gJk" secondAttribute="bottom" constant="192" id="TJe-xC-LrQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3At-3i-rfQ" secondAttribute="trailing" constant="132" id="Wnn-9x-Kxc"/>
+                            <constraint firstItem="9Xw-rI-gJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dQN-OO-Tvr"/>
+                            <constraint firstItem="9Xw-rI-gJk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="fta-kz-fCA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NV8-lb-PVA" secondAttribute="trailing" id="hn7-LM-cY3"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="NV8-lb-PVA" secondAttribute="leading" id="y8z-cb-ez6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sAc-dm-x3Y"/>
                 </viewController>
