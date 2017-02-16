@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="964" y="36.431784107946029"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="zXh-c4-msx">
             <objects>
-                <viewController id="rYO-dr-amu" sceneMemberID="viewController">
+                <viewController id="rYO-dr-amu" customClass="SearchViewController" customModule="MatNyttigt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dN9-Py-oQK"/>
                         <viewControllerLayoutGuide type="bottom" id="HLn-yT-6vf"/>
@@ -120,6 +120,7 @@
                                 </constraints>
                                 <state key="normal" title="HITTA LIVSMEDL"/>
                                 <connections>
+                                    <action selector="printingMessage:" destination="rYO-dr-amu" eventType="touchUpInside" id="6gP-cR-MwD"/>
                                     <segue destination="Bor-3T-VOX" kind="show" id="mEl-Ko-sUO"/>
                                 </connections>
                             </button>
@@ -143,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="1828" y="44.527736131934034"/>
         </scene>
-        <!--View Controller-->
+        <!--List View Controller-->
         <scene sceneID="7uT-Kf-ZIL">
             <objects>
-                <viewController id="Bor-3T-VOX" sceneMemberID="viewController">
+                <viewController id="Bor-3T-VOX" customClass="ListViewController" customModule="MatNyttigt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gVz-Y0-DKs"/>
                         <viewControllerLayoutGuide type="bottom" id="UkH-iE-V1e"/>
@@ -173,13 +174,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dxI-nx-qMk">
+                                <rect key="frame" x="16" y="329" width="343" height="318"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dxI-nx-qMk" firstAttribute="trailing" secondItem="SKR-Cv-hsn" secondAttribute="trailingMargin" id="9l1-p0-iwH"/>
                             <constraint firstItem="MD8-OF-jwk" firstAttribute="leading" secondItem="SKR-Cv-hsn" secondAttribute="leadingMargin" id="Ac2-za-xaU"/>
                             <constraint firstItem="MD8-OF-jwk" firstAttribute="top" secondItem="gVz-Y0-DKs" secondAttribute="bottom" constant="8" symbolic="YES" id="CrP-io-wLH"/>
+                            <constraint firstItem="dxI-nx-qMk" firstAttribute="top" secondItem="vRa-OB-e5T" secondAttribute="bottom" constant="61" id="T8H-bY-D6Y"/>
+                            <constraint firstItem="dxI-nx-qMk" firstAttribute="leading" secondItem="SKR-Cv-hsn" secondAttribute="leadingMargin" id="Vdd-NR-jrr"/>
                             <constraint firstItem="vRa-OB-e5T" firstAttribute="leading" secondItem="SKR-Cv-hsn" secondAttribute="leadingMargin" id="dFF-IF-iIv"/>
                             <constraint firstItem="vRa-OB-e5T" firstAttribute="trailing" secondItem="SKR-Cv-hsn" secondAttribute="trailingMargin" id="kdb-k3-7O8"/>
+                            <constraint firstItem="UkH-iE-V1e" firstAttribute="top" secondItem="dxI-nx-qMk" secondAttribute="bottom" constant="20" id="mh9-5l-ipT"/>
                             <constraint firstItem="MD8-OF-jwk" firstAttribute="trailing" secondItem="SKR-Cv-hsn" secondAttribute="trailingMargin" id="mo5-dc-kkv"/>
                             <constraint firstItem="vRa-OB-e5T" firstAttribute="top" secondItem="MD8-OF-jwk" secondAttribute="bottom" constant="154" id="nW2-dZ-RC0"/>
                         </constraints>
