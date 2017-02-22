@@ -139,6 +139,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="LsQ-2R-BYr" secondAttribute="trailing" id="xWy-av-ure"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchField" destination="RFq-BU-KaL" id="ITM-Y0-kTO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZg-me-CAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,8 +8,11 @@
 
 import UIKit
 
+
 class SearchViewController: UIViewController {
 
+    @IBOutlet weak var searchField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,8 +24,14 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     @IBAction func printingMessage(_ sender: UIButton) {
         print("osidogsd")
+        
     }
-   }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tableViewController = segue.destination as! TableViewController
+        
+        tableViewController.searchWord = searchField.text!
+    }
+}

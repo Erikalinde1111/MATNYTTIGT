@@ -9,32 +9,42 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-
+    var searchWord = ""
+    var foodManager : FoodManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        foodManager = FoodManager()
+        foodManager.tableviewctrl = self
+        foodManager.searchedWord = searchWord
+        foodManager.searchFood()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+        }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
+        NSLog("\(foodManager.foods.count) items i listan")
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        //return 1
+        
+        return foodManager.foodsList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = "Apa"
+        cell.textLabel?.text = foodManager.foodsList[indexPath.row].name
+        //cell.textLabel?.text = "Apa"
         return cell
     }
        // Override to support editing the table view.
@@ -46,11 +56,18 @@ class TableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }*/
-    
+
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        //skall tydligen hämta texten från senderns cell har dock ingen aning om hur
-        var destViewController : DetailViewController = segue.destination as! DetailViewController
+        //hämtar texten från senderns cell
+        let destViewController : DetailViewController = segue.destination as! DetailViewController
+        NSLog("Klickar på ett item i listan")
+        //denna metod overridar default segue från knappen
+        if let cell = sender as? UITableViewCell {
+            destViewController.title = cell.textLabel?.text
+        
+        }
         
     }
 
