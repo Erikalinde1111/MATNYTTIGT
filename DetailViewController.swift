@@ -39,6 +39,7 @@ class DetailViewController: UIViewController {
             self.nutrition3.text = "\(self.foodManager.vitaminD!)"
             self.nutrition4.text = "\(self.foodManager.zink!)"
             self.nutrition5.text = "\(self.foodManager.salt!)"
+            
         }
     }
     
