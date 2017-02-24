@@ -15,6 +15,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         foodManager = FoodManager()
+        //nedanstående rad kör viewDidLoad igen så att den kör resterande rader
         foodManager.tableviewctrl = self
         foodManager.searchedWord = searchWord
         foodManager.searchFood()
@@ -66,7 +67,7 @@ class TableViewController: UITableViewController {
         //denna metod overridar default segue från knappen
         if let cell = sender as? UITableViewCell {
             destViewController.title = cell.textLabel?.text
-        
+            destViewController.listOfViewedFoods = foodManager.foodsList
         }
         
     }
