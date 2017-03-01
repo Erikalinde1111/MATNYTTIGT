@@ -29,41 +29,54 @@
                                     <constraint firstAttribute="height" constant="21" id="yRU-Eh-0VV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HÄR KAN DU SÖKA I LIVSMEDELSVERKETS DATABAS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NV8-lb-PVA">
-                                <rect key="frame" x="16" y="285" width="343" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3At-3i-rfQ">
-                                <rect key="frame" x="153" y="580" width="68" height="37"/>
-                                <color key="backgroundColor" red="0.15533296290000001" green="0.65067791100000005" blue="0.79628190450000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="128" y="587" width="119" height="30"/>
+                                <color key="backgroundColor" red="0.67833318655128205" green="0.050226729825789809" blue="0.12316530609309567" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="68" id="6MX-oy-buS"/>
-                                    <constraint firstAttribute="height" constant="37" id="chE-VZ-WZ0"/>
+                                    <constraint firstAttribute="height" constant="30" id="KAz-2u-iWX"/>
+                                    <constraint firstAttribute="width" constant="119" id="lCe-LK-heu"/>
                                 </constraints>
-                                <state key="normal" title="SÖK"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="BÖRJA SÖKNING">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="rYO-dr-amu" kind="show" id="DsS-h7-Pit"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="varmkorvmedsenap" translatesAutoresizingMaskIntoConstraints="NO" id="if7-h4-QiV">
+                                <rect key="frame" x="126" y="64" width="123" height="158"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="158" id="5QA-x7-Ipz"/>
+                                    <constraint firstAttribute="width" constant="123" id="CJ1-km-sKL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="lökringar" translatesAutoresizingMaskIntoConstraints="NO" id="fuq-sz-HVQ">
+                                <rect key="frame" x="229" y="72" width="130" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="GhX-Lb-UT9"/>
+                                    <constraint firstAttribute="width" constant="130" id="JNq-M8-ifw"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3At-3i-rfQ" secondAttribute="bottom" constant="50" id="1Ph-DC-EH9"/>
                             <constraint firstItem="9Xw-rI-gJk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4FU-rd-3pc"/>
-                            <constraint firstItem="NV8-lb-PVA" firstAttribute="top" secondItem="9Xw-rI-gJk" secondAttribute="bottom" constant="192" id="TJe-xC-LrQ"/>
+                            <constraint firstItem="if7-h4-QiV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E8d-nq-V62"/>
+                            <constraint firstItem="3At-3i-rfQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IWh-G8-R2E"/>
                             <constraint firstItem="9Xw-rI-gJk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dQN-OO-Tvr"/>
                             <constraint firstItem="9Xw-rI-gJk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="fta-kz-fCA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NV8-lb-PVA" secondAttribute="trailing" id="hn7-LM-cY3"/>
-                            <constraint firstItem="3At-3i-rfQ" firstAttribute="centerX" secondItem="NV8-lb-PVA" secondAttribute="centerX" id="vpp-Vf-VTV"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="NV8-lb-PVA" secondAttribute="leading" id="y8z-cb-ez6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sAc-dm-x3Y"/>
+                    <connections>
+                        <outlet property="onion" destination="fuq-sz-HVQ" id="FxZ-yR-irV"/>
+                        <outlet property="varmkorv" destination="if7-h4-QiV" id="53j-yq-tYv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,6 +117,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="SKRIV IN LIVSMEDLET DU VILL SÖKA PÅ">
                                         <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" metaFont="system" size="17"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -113,19 +127,21 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qua-oY-Q9c">
                                 <rect key="frame" x="128" y="587" width="118" height="30"/>
-                                <color key="backgroundColor" red="0.16619554218183008" green="0.59231076837114904" blue="0.91306037303664922" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.67833318659999997" green="0.050226729829999997" blue="0.1231653061" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Lvq-VR-ros"/>
                                     <constraint firstAttribute="width" constant="118" id="dng-ad-ABW"/>
                                 </constraints>
-                                <state key="normal" title="HITTA LIVSMEDL"/>
+                                <state key="normal" title="HITTA LIVSMEDL">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="printingMessage:" destination="rYO-dr-amu" eventType="touchUpInside" id="6gP-cR-MwD"/>
                                     <segue destination="Baa-hQ-gVo" kind="show" id="2Aq-3Y-oFH"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="RFq-BU-KaL" firstAttribute="trailing" secondItem="G7T-1R-gpx" secondAttribute="trailingMargin" id="0VT-9O-c7f"/>
                             <constraint firstItem="LsQ-2R-BYr" firstAttribute="top" secondItem="dN9-Py-oQK" secondAttribute="bottom" constant="8" symbolic="YES" id="Cgh-ya-gZT"/>
@@ -365,6 +381,7 @@
                         <outlet property="nutrition3" destination="LbN-XG-KGm" id="Sg7-a0-Xsi"/>
                         <outlet property="nutrition4" destination="yaG-ZJ-2gZ" id="h31-q4-LDb"/>
                         <outlet property="nutrition5" destination="cgE-th-ehR" id="PXH-lq-cBC"/>
+                        <outlet property="totalNutrition" destination="k6O-Ga-mzE" id="nji-hv-B2T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tjd-2Q-gdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -390,4 +407,8 @@
             <point key="canvasLocation" x="105" y="36"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lökringar" width="580" height="540"/>
+        <image name="varmkorvmedsenap" width="321" height="423"/>
+    </resources>
 </document>

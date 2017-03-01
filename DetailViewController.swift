@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var nutrition3: UILabel!
     @IBOutlet weak var nutrition4: UILabel!
     @IBOutlet weak var nutrition5: UILabel!
+    @IBOutlet weak var totalNutrition: UILabel!
     
     var listOfViewedFoods : [Food]!
     var num : Int!
@@ -39,7 +40,7 @@ class DetailViewController: UIViewController {
             self.nutrition3.text = "\(self.foodManager.vitaminD!)"
             self.nutrition4.text = "\(self.foodManager.zink!)"
             self.nutrition5.text = "\(self.foodManager.salt!)"
-            
+            self.totalNutrition.text = "\(self.foodManager.calcNutrion())"
         }
     }
     

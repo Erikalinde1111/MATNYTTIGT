@@ -10,16 +10,41 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var onion: UIImageView!
+    @IBOutlet weak var varmkorv: UIImageView!
+    var dynamicAnimator : UIDynamicAnimator!
+    var gravity : UIGravityBehavior!
+    var collision : UICollisionBehavior!
+    var snap : UISnapBehavior!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        onion.alpha = 0
+        dynamicAnimator = UIDynamicAnimator(referenceView: view)
+        gravity = UIGravityBehavior(items:[varmkorv])
+        
+        dynamicAnimator.addBehavior(gravity)
+        collision = UICollisionBehavior(items: [varmkorv])
+        collision.translatesReferenceBoundsIntoBoundary = true
+        dynamicAnimator.addBehavior(collision)
+        snap = UISnapBehavior(item: varmkorv,snapTo: view.center)
+        snap.damping = 5
+        dynamicAnimator.addBehavior(snap)
+        
+        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { (timer) in
+            self.onion.alpha = 1
+            self.moveOnion()
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func moveOnion() {
+        
+        UIView.beginAnimations("Flytta lökringar", context: nil)
+        UIView.setAnimationDuration(0.5)
+        UIView.setAnimationCurve(.easeOut)
+        onion.center = self.varmkorv.center
+        UIView.commitAnimations()
     }
-
 
 }
 

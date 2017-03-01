@@ -118,6 +118,7 @@ class FoodManager {
                             self.salt = nutrientValues?["salt"] as? Float
                             
                             self.detailViewctrl.refreshProperties()
+                            
                         }else {
                             NSLog("Misslyckades med att typomvandla från json")
                         }
@@ -136,6 +137,17 @@ class FoodManager {
             NSLog("Misslyckades med att skapa url")
         }
 
+    }
+    
+    func calcNutrion() -> Float{
+        let magnesium = Float(self.magnesium!)
+        let salt = self.salt!
+        let vitaminC = Float(self.vitaminC!)
+        let vitaminD = self.vitaminD!
+        let zink = self.zink!
+        let totalN: Float = magnesium + salt + vitaminC + vitaminD + zink
+        
+        return totalN
     }
     
 }
